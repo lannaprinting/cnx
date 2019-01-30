@@ -1,68 +1,46 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        lannaprinting
-      </h1>
-      <h2 class="subtitle">
-        My marvelous Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
+  <div class="section">
+      <div class="columns">
+       <div class="column">
+          <h3 class="subtitle">
+            ลานนาการพิมพ์ ได้ก่อตั้งขึ้นในปี 2516 ตั้งแต่รุ่นคุณพ่อ เราได้พัฒนางานพิมพ์ให้ทันสมัยตามวิวัฒนาการสิ่งพิมพ์ที่เปลี่ยนแปลงในแต่ละยุคสมัย มีบุคลากรที่ชำนาญการ ทำหน้าหน้าดูแลและควบคุมและตรวจสอบงานให้มีประสิทธิภาพ มีฝ่ายขายที่คอยอำนวยความสะดวก รวดเร็วทั้งก่อนและหลังการขาย ที่สำคัญ มีทีมงานกราฟิกดีไซน์ระดับมืออาชีพ ที่ออกแบบงานให้ดูแปลกใหม่ ทันสมัย สร้างสรรค์ผลงานตามความต้องการของลูกค้า
+        </h3>
+        </div>
+        <div class="column is-two-fifths"> 
+          <img src="https://via.placeholder.com/600" alt="" srcset="">
+        </div>
+ 
       </div>
+      <!-- <div class="wrapper-item">
+        <thumbnail-component v-for="(item, index) in 8" :key="index"/>
+      </div> -->
     </div>
-  </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import ThumbnailComponent from '@/components/ThumbnailComponent'
 
 export default {
   components: {
-    Logo
+    ThumbnailComponent
+  },
+
+  data () {
+    return {}
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style scoped>
+.caption-history {
+  text-indent: 40px;
+}
+
+.wrapper-item {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>
+

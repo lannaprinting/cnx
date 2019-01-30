@@ -1,0 +1,17 @@
+html * {
+    font-family: 'Prompt', sans-serif;
+    color: #58595b;
+}
+.wrapper {
+    /* border: 1px solid black; */
+    width: 60%;
+    margin: 0 auto;
+}
+
+.top {
+    text-align: right
+}
+
+.navbar-item{
+    text-align: center
+}
