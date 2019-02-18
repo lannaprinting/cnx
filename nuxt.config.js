@@ -16,7 +16,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Prompt' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Prompt' },
+      { rel: 'stylesheet', href: 'https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css' },
     ]
   },
 
@@ -36,6 +37,9 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/vue-multiselect',
+
+    '@/plugins/Firebase'
   ],
 
   /*
