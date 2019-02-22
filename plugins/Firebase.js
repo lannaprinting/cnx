@@ -3,23 +3,19 @@ import 'firebase/firestore'
 
 if (!firebase.apps.length) {
 
-    const config = {
-        apiKey: 'AIzaSyDrelWMLh8n0amFb7JEJ2TDPU2hc-XDJXA',
-        authDomain: 'wx-db-i.firebaseapp.com',
-        databaseURL: 'https://wx-db-i.firebaseio.com',
-        projectId: 'wx-db-i',
-        storageBucket: 'wx-db-i.appspot.com',
-        messagingSenderId: '288671693811'
-    }
+   var config = {
+    apiKey: "AIzaSyCAvWQR3JY-bpJvMxvSx0at6o1AxJq-heY",
+    authDomain: "lanna-printing.firebaseapp.com",
+    databaseURL: "https://lanna-printing.firebaseio.com",
+    projectId: "lanna-printing",
+    storageBucket: "lanna-printing.appspot.com",
+    messagingSenderId: "630673219912"
+  }
 
     firebase.initializeApp(config)
-    firebase.firestore().settings({timestampsInSnapshots: true})
+    // firebase.firestore().settings({timestampsInSnapshots: true})
 }
 
 const fireDb = firebase.firestore()
-
-// fireDb.settings({
-//     timestampsInSnapshots: true
-// })
 
 export {fireDb}

@@ -28,6 +28,8 @@
           <option value="7.75x10.7นิ้ว">7.75x10.75นิ้ว</option>
           <option value="8.5x12นิ้ว">8.5x12นิ้ว</option>
           <option value="9x12นิ้ว">9x12นิ้ว</option>
+          <option value="5x7นิ้ว">5x7นิ้ว</option>
+          <option value="A4">A4</option>
         </select>
       </div>
     </div>
@@ -76,20 +78,16 @@
 
   <div class="field is-grouped is-grouped-centered">
   <p class="control" v-if="cancel">
-    <a class="button is-primary" @click="cancel">
+    <a class="button is-light" @click="cancel">
       ยกเลิก
     </a>
   </p>
   <p class="control" v-if="apply">
-    <a class="button is-light" @click="apply(fields)">
+    <a class="button is-primary" @click="apply(fields)">
       ตกลง
     </a>
   </p>
 </div>
-
-
-
-        <pre> {{fields}} </pre>
     </div>
 </template>
 
@@ -108,7 +106,13 @@ export default {
             {value: 'แบงค์ฟ้า', label: 'แบงค์ฟ้า'},
             {value: 'แบงค์เหลือง', label: 'แบงค์เหลือง'},
             {value: 'แบงค์ชมพู', label: 'แบงค์ชมพู'},
-            {value: 'ปรูฟ', label: 'ปรูฟ'}
+            {value: 'ปรูฟ', label: 'ปรูฟ'},
+            {value: 'กระดาษเคมี บนขาว', label: 'กระดาษเคมี บนขาว'},
+            {value: 'กระดาษเคมี บนชมพู', label: 'กระดาษเคมี บนชมพู'},
+            {value: 'กระดาษเคมี กลางชมพู', label: 'กระดาษเคมี กลางชมพู'},
+            {value: 'กระดาษเคมี กลางเหลือง', label: 'กระดาษเคมี กลางเหลือง'},
+            {value: 'กระดาษเคมี ล่างฟ้า', label: 'กระดาษเคมี ล่างฟ้า'},
+            {value: 'กระดาษเคมี ล่างเหลือง', label: 'กระดาษเคมี ล่างเหลือง'}
         ]
       }
   },
@@ -128,13 +132,25 @@ export default {
 .wrap {
     margin: 100px 0;
     color: $primary;
+    .multiselect--above {
+      background-color: red
+    }
+    .multiselect--active {
+      background-color: red
+    }
     .multiselect {
         // background-color: red;
         all: unset;
+        
         @extend .input
     }
     .multiselect__select {
-        top: 25px;
+        all:unset;
+        // text-align: right;
+        // border-style: none;
+        &:before {
+          border-style: none;
+        }
     }
     
     .multiselect__tags {

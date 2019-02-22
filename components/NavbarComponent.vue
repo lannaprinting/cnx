@@ -77,6 +77,7 @@
           </p> -->
           <p class="navbar-item"><nuxt-link to="/">หน้าแรก<br>HOME</nuxt-link></p>
           <p class="navbar-item"><nuxt-link to="/Bill">Bill<br>บิล</nuxt-link></p>
+          <p class="navbar-item"><nuxt-link to="/Book">Book<br>หนังสือ</nuxt-link></p>
           <p class="navbar-item"><nuxt-link to="AboutPage">เกี่ยวกับเรา<br>ABOUNT US</nuxt-link></p>
           <p class="navbar-item"><nuxt-link to="UploadPage">อัพโหลดงาน<br>upload</nuxt-link></p>
           <p class="navbar-item"><nuxt-link to="OrderAndPaymentPage">สั่งงานและชำระเงิน<br>ORDER & PAYMENT</nuxt-link></p>
