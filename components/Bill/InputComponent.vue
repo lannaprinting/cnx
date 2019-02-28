@@ -25,11 +25,7 @@
     <div class="control">
       <div class="select is-fullwidth is-large">
         <select v-model="fields.paperSize">
-          <option value="7.75x10.7นิ้ว">7.75x10.75นิ้ว</option>
-          <option value="8.5x12นิ้ว">8.5x12นิ้ว</option>
-          <option value="9x12นิ้ว">9x12นิ้ว</option>
-          <option value="5x7นิ้ว">5x7นิ้ว</option>
-          <option value="A4">A4</option>
+          <option v-for="(paperSize, index) in material.Size" :key="index" :value="paperSize">{{paperSize}}</option>
         </select>
       </div>
     </div>
@@ -92,6 +88,7 @@
 </template>
 
 <script>
+import Material from '@/assets/data.json'
 export default {
   props: {
     cancel: {type: Function},
@@ -101,6 +98,7 @@ export default {
 
   data () {
       return {
+        material: Material,
         Layers: [
             {value: 'ปอนด์', label: 'ปอนด์'},
             {value: 'แบงค์ฟ้า', label: 'แบงค์ฟ้า'},
@@ -111,6 +109,7 @@ export default {
             {value: 'กระดาษเคมี บนชมพู', label: 'กระดาษเคมี บนชมพู'},
             {value: 'กระดาษเคมี กลางชมพู', label: 'กระดาษเคมี กลางชมพู'},
             {value: 'กระดาษเคมี กลางเหลือง', label: 'กระดาษเคมี กลางเหลือง'},
+            {value: 'กระดาษเคมี กลางกลางเขียว', label: 'กระดาษเคมี กลางเขียว'},
             {value: 'กระดาษเคมี ล่างฟ้า', label: 'กระดาษเคมี ล่างฟ้า'},
             {value: 'กระดาษเคมี ล่างเหลือง', label: 'กระดาษเคมี ล่างเหลือง'}
         ]

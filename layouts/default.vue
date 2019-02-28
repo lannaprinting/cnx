@@ -2,7 +2,7 @@
   <div class="">
       <navbar-component />
 
-      <div class="container">
+      <div class="section container">
         <nuxt /> <!-- content on change -->
       </div>
 

@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(item, index) in data.data" :key="index">
+      <tr v-for="(item, index) in data.data" :key="index" class="has-background-primary">
         <td v-for="(config, index) in data.config" :key="index">
           <span>{{item[config.name]}} </span>
         </td>
@@ -18,9 +18,24 @@
   </table>
 </template>
 <script>
+import _ from 'lodash'
 export default {
   props: {
     data: {}
+  },
+  filters: {
+    status: function (value) {
+      console.log(value)
+    }
+  },
+  data () {
+    // _.map(this.data.data.generate, e => {
+    //   console.log('xx')
+    //   true &&  e.active ?  resault = true: resault = false
+    // })
+    return {
+      // status: false
+    }
   }
 }
 </script>

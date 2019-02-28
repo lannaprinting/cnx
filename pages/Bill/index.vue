@@ -1,8 +1,8 @@
 <template>
 <div>
-  <h1 class="title"> Bill </h1>
-  <div class="columns test">
+  <div class="columns">
     <div class="column">
+        <h1 class="title"> Bill </h1>
       <input-component :fields="fields" :apply="apply" :cancel="cancel"  />
     </div>
     <div class="column is-three-fifths">
@@ -70,6 +70,9 @@ export default {
         apply: async function (callback) {
             let Book = calculateTotalbook(callback)
 
+            let multiple = 200
+            callback.paperLayers.length == 4 ? multiple = 100 : multiple
+
             // กระดาษต่อ 1 เล่ม
             let sheetsPerBook = callback.paperLayers.length * 50
             // กระดาษที่ใช้ทั้งหมด
@@ -79,7 +82,7 @@ export default {
             let sheetsPerLayer = totalSheets / callback.paperLayers.length
 
             // แยกพาร์ท
-            let path = totalSheets / (callback.paperLayers.length * 200)
+            let path = totalSheets / (callback.paperLayers.length * multiple)
             // หารแล้วปัดเศษขึ้น
             path = Math.ceil(path)
             

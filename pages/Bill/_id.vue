@@ -31,13 +31,22 @@
 <script>
 import Firestore from '@/plugins/boydPlugins'
 import moment from 'moment'
+import _ from 'lodash'
 
-let Bill = new Firestore('Bills')
 export default {
     async asyncData ({params}) {
         let item = await Bill.getDocumentByName(params.id)
+
+
+        // เช็คสถานะงาน
+        let resault = false
+        _.map(item.generate, e => {
+          true &&  e.active ?  resault = true: resault = false
+        })
+
         return {
-            item: item
+            item: item,
+            status: resault
         }
     },
     

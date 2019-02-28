@@ -22,12 +22,13 @@
         <input type="text" v-model="fields.title" class="input is-large">
       </p>
     </div>
+    <hr>
     <div class="field">
-      <label class="label">วัสดุ</label>
+      <label class="label">พิมพ์</label>
       <div class="control-has-icons-left">
         <div class="select is-fullwidth is-large">
-          <select v-model="fields.paperMaterial">
-            <option v-for="(m, index) in material.Material" :key="index" :value="m"> {{m}} </option>
+          <select v-model="fields.print">
+            <option v-for="(m, index) in material.Print" :key="index" :value="m"> {{m}} </option>
           </select>
         </div>
       </div>
@@ -38,6 +39,16 @@
         <div class="select is-fullwidth is-large">
           <select v-model="fields.paperSize">
             <option v-for="(m, index) in material.Size" :key="index" :value="m"> {{m}} </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">วัสดุ</label>
+      <div class="control-has-icons-left">
+        <div class="select is-fullwidth is-large">
+          <select v-model="fields.paperMaterial">
+            <option v-for="(m, index) in material.Material" :key="index" :value="m"> {{m}} </option>
           </select>
         </div>
       </div>

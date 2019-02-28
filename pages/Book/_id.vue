@@ -33,7 +33,8 @@
                             <button class="button is-light" @click="decrement">-</button>
                         </div>
                         <div class="control">
-                            <button class="button is-primary" @click="increment">+</button>
+                            <button v-if="item.total != item.process" class="button is-primary" @click="increment">+</button>
+                            <button v-else class="button is-primary" disabled @click="increment">เสร็จสิ้น</button>
                         </div>
                     </div>
                 </div>
@@ -41,8 +42,8 @@
         </div>
 
         <div class="card-footer">
-            <li class="card-footer-item" @click="remove">remove</li>
-            <li class="card-footer-item">aa</li>
+            <nuxt-link to="/Book" class="card-footer-item">ย้อนกับ</nuxt-link>
+            <a @click="remove" class="card-footer-item">ลบ</a>
         </div>
         <!-- <pre> {{item}} </pre> -->
     </div>
